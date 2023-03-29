@@ -103,6 +103,7 @@ server <- function(input, output) {
         
         
         ### add panes ----
+        
         #### (sets the order in which layers are drawn/stacked -- higher 
         #### numbers appear on top)
         ces4_map <- ces4_map %>% 
@@ -122,7 +123,7 @@ server <- function(input, output) {
         #### add CES polygons ----
         ces4_map <- ces4_map %>%
             addPolygons(data = ces_4 %>%
-                            st_transform(crs = geographic_crs), # ces3_poly %>% filter(California_County == cities_counties[[input$city_selected_1]]),
+                            st_transform(crs = geographic_crs), 
                         options = pathOptions(pane = "ces_4_pane"),
                         color = 'darkgrey', 
                         weight = 0.5,
@@ -130,7 +131,7 @@ server <- function(input, output) {
                         opacity = 0.8,
                         fillOpacity = 0.8,
                         fillColor = ~ces_pal(c_iscore_p), 
-                        highlightOptions = highlightOptions(color = "white", weight = 2), # fill = TRUE, fillColor = "white"),#,bringToFront = TRUE
+                        highlightOptions = highlightOptions(color = "white", weight = 2), 
                         popup = ~paste0('<b>', '<u>','CalEnviroScreen 4.0 (CES)', '</u>','</b>','<br/>',
                                         '<b>', 'Census Tract: ', '</b>',  tract, '<br/>',
                                         '<b>', 'CES Score: ', '</b>', round(c_iscore, 2), '<br/>',

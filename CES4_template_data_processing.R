@@ -5,7 +5,6 @@ library(tidyverse)
 library(sf)
 library(here)
 # library(mapview)
-# library(readxl)
 library(janitor)
 library(httr)
 library(esri2sf) # install using remotes::install_github("yonghah/esri2sf"); for more info see: https://github.com/yonghah/esri2sf 
