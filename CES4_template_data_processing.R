@@ -143,10 +143,10 @@ st_write(sf_ces4_processed,
               'calenviroscreen_4-0_processed.gpkg'), 
          append = FALSE)
 
-st_write(sf_ces4_tiger, 
-         here('data_processed', 
-              'calenviroscreen_4-0_processed_tiger.gpkg'), 
-         append = FALSE)
+# st_write(sf_ces4_tiger, 
+#          here('data_processed', 
+#               'calenviroscreen_4-0_processed_tiger.gpkg'), 
+#          append = FALSE)
 
 st_write(sf_ces4_tiger_simple, 
          here('data_processed', 
