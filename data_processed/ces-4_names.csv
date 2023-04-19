@@ -1,0 +1,66 @@
+ces_variable,ces_variable_original_shapefile,variable_name,variable_description,group,subgroup,type
+census_tract_2010,tract,Census Tract (2010),Census Tract ID from 2010 Census,geospatial,NA,NA
+zip_code,zip,ZIP Code,Postal ZIP Code that the census tract falls within,geospatial,NA,NA
+county_name,county,County Name,California county that the census tract falls within,geospatial,NA,NA
+approximate_location,approx_loc,Approximate Location,"Approximate city where each census tract is located based on US Census Incorporated Places (2020, Cities), US Census Designated Places, (2020, Designated Places), and the CA Department of Tax and Fees City and County Boundaries and City Annexations (2021, Unincorporated Areas) boundary files. All tracts that did not fall within one of these boundaries were assigned ""unincorporated county area"" based on that tract's county. This is for reference purposes only and should not be used to determine whether a census tract falls within a city or town boundary.",geospatial,NA,NA
+total_population_2019_acs,tot_pop19,Total Population (2019 ACS),2019 ACS population estimates in census tracts,demographic,demographic,count
+calenviroscreen_4_0_score,c_iscore,CalEnviroScreen 4.0 Score,"CalEnviroScreen Score, Pollution Score multiplied by Population Characteristics Score",summary,summary,score
+calenviroscreen_4_0_percentile,c_iscore_p,CalEnviroScreen 4.0 Percentile,Percentile of the CalEnviroScreen score,summary,summary,percentile
+ozone_score,ozone,Ozone Score,Amount of daily maximum 8 hour Ozone concentration,pollution burden,exposures,score
+ozone_percentile,ozone_p,Ozone Percentile,Ozone percentile,pollution burden,exposures,percentile
+pm_2_5_score,pm2_5,PM 2.5 Score,Annual mean PM 2.5 concentrations,pollution burden,exposures,score
+pm_2_5_percentile,pm2_5_p,PM 2.5 Percentile,PM 2.5 percentile,pollution burden,exposures,percentile
+diesel_pm_score,diesel_pm,Diesel PM Score,Diesel PM emissions from on-road and non-road sources,pollution burden,exposures,score
+diesel_pm_percentile,diesel_pm_p,Diesel PM Percentile,Diesel PM percentile,pollution burden,exposures,percentile
+pesticides_score,pesticide,Pesticides Score,Total pounds of selected active pesticide ingredients (filtered for hazard and volatility) used in production-agriculture per square mile in the census tract,pollution burden,exposures,score
+pesticides_percentile,pesticide_p,Pesticides Percentile,Pesticides percentile,pollution burden,exposures,percentile
+toxic_release_score,tox_rel,Toxic Release Score,Toxicity-weighted concentrations of modeled chemical releases to air from facility emissions and off-site incineration (from RSEI),pollution burden,exposures,score
+toxic_release_percentile,tox_rel_p,Toxic Release Percentile,Toxic release percentile,pollution burden,exposures,percentile
+traffic_score,traffic,Traffic Score,"Traffic density, in vehicle-kilometers per hour per road length, within 150 meters of the census tract boundary",pollution burden,exposures,score
+traffic_percentile,traffic_p,Traffic Percentile,Traffic percentile,pollution burden,exposures,percentile
+drinking_water_score,drink_wat,Drinking Water Score,Drinking water contaminant index for selected contaminants,pollution burden,exposures,score
+drinking_water_percentile,drink_wat_p,Drinking Water Percentile,Drinking water percentile,pollution burden,exposures,percentile
+lead_score,lead,Lead Score,Potential risk for lead exposure in children living in low-income communities with older housing,pollution burden,exposures,score
+lead_percentile,lead_p,Lead Percentile,Children's lead risk from housing percentile,pollution burden,exposures,percentile
+cleanup_sites_score,cleanup,Cleanup Sites Score,"Cleanup sites, sum of weighted EnviroStor cleanup sites within buffered distances to populated blocks of census tracts",pollution burden,environmental effects,score
+cleanup_sites_percentile,cleanup_p,Cleanup Sites Percentile,Cleanup sites percentile,pollution burden,environmental effects,percentile
+groundwater_threats_score,gw_threat,Groundwater Threats Score,"Groundwater threats, sum of weighted GeoTracker leaking underground storage tank sites  within buffered distances to populated blocks of census tracts",pollution burden,environmental effects,score
+groundwater_threats_percentile,gw_threat_p,Groundwater Threats Percentile,Groundwater threats percentile,pollution burden,environmental effects,percentile
+hazardous_waste_score,haz_waste,Hazardous Waste Score,Sum of weighted hazardous waste facilities and large quantity generators within buffered distances to populated blocks of census tracts,pollution burden,environmental effects,score
+hazardous_waste_percentile,haz_waste_p,Hazardous Waste Percentile,Hazardous waste percentile,pollution burden,environmental effects,percentile
+impaired_water_bodies_score,imp_wat_bod,Impaired Water Bodies Score,"Impaired water bodies, sum of number of pollutants across all impaired water bodies within buffered distances to populated blocks of census tracts",pollution burden,environmental effects,score
+impaired_water_bodies_percentile,imp_wat_bod_p,Impaired Water Bodies Percentile,Impaired water bodies percentile,pollution burden,environmental effects,percentile
+solid_waste_score,sol_waste,Solid Waste Score,Sum of weighted solid waste sites and facilities (SWIS) within  buffered distances to populated blocks of census tracts,pollution burden,environmental effects,score
+solid_waste_percentile,sol_waste_p,Solid Waste Percentile,Solid waste percentile,pollution burden,environmental effects,percentile
+pollution_burden_group_score,poll_burd,Pollution Burden Group Score,Average of percentiles from the Pollution Burden indicators (with a half weighting for the Environmental Effects indicators),pollution burden,summary,score
+pollution_burden_group_score_scaled,pol_burd_sc,Pollution Burden Group Score (Scaled),Pollution Burden variable scaled with a range of 0-10. (Used to calculate CES 4.0 Score),pollution burden,summary,score scaled
+pollution_burden_group_percentile,pol_burd_p,Pollution Burden Group Percentile,Pollution burden percentile,pollution burden,summary,percentile
+asthma_score,asthma,Asthma Score,Age-adjusted rate of emergency department visits for asthma,population characteristics,sensitive populations,score
+asthma_percentile,asthma_p,Asthma Percentile,Asthma percentile,population characteristics,sensitive populations,percentile
+low_birth_weight_score,low_birt_wt,Low Birth Weight Score,Percent low birth weight,population characteristics,sensitive populations,score
+low_birth_weight_percentile,low_bir_wp,Low Birth Weight Percentile,Low birth weight percentile,population characteristics,sensitive populations,percentile
+cardiovascular_diesease_score,cardiovas,Cardiovascular Diesease Score,"Age-adjusted rate of emergency department visits for heart attacks per 10,000",population characteristics,sensitive populations,score
+cardiovascular_diesease_percentile,cardiovas_p,Cardiovascular Diesease Percentile,Cardiovascular disease percentile,population characteristics,sensitive populations,percentile
+education_score,educatn,Education Score,Percent of population over 25 with less than a high school education,population characteristics,socioeconomic factors,score
+education_percentile,educat_p,Education Percentile,Education percentile,population characteristics,socioeconomic factors,percentile
+linguistic_isolation_score,ling_isol,Linguistic Isolation Score,Percent limited English speaking households,population characteristics,socioeconomic factors,score
+linguistic_isolation_percentile,ling_isol_p,Linguistic Isolation Percentile,Linguistic isolation percentile,population characteristics,socioeconomic factors,percentile
+poverty_score,poverty,Poverty Score,Percent of population living below two times the federal poverty level,population characteristics,socioeconomic factors,score
+poverty_percentile,poverty_p,Poverty Percentile,Poverty percentile,population characteristics,socioeconomic factors,percentile
+unemployment_score,unempl,Unemployment Score,Percent of the population over the age of 16 that is unemployed and eligible for the labor force,population characteristics,socioeconomic factors,score
+unemployment_percentile,unempl_p,Unemployment Percentile,Unemployment percentile,population characteristics,socioeconomic factors,percentile
+housing_burden_score,hous_burd,Housing Burden Score,Percent housing burdened low income households,population characteristics,socioeconomic factors,score
+housing_burden_percentile,hous_burd_p,Housing Burden Percentile,Housing burden percentile,population characteristics,socioeconomic factors,percentile
+population_characteristics_group_score,pop_char,Population Characteristics Group Score,Average of percentiles from the Population Characteristics indicators,population characteristics,summary,score
+population_characteristics_group_score_scaled,pop_char_sc,Population Characteristics Group Score (Scaled),Population Characteristics variable scaled with a range of 0-10. (Used to calculate CES 4.0 Score),population characteristics,summary,score scaled
+population_characteristics_group_percentile,pop_char_p,Population Characteristics Group Percentile,Population characteristics percentile,population characteristics,summary,percentile
+children_10_years_percent,child_10,Children < 10 years (%),2019 ACS population estimates of the percent per census tract of children under 10 years old,demographic,demographic,percent
+pop_10_64_years_percent,pop_10_64,Pop 10-64 years (%),2019 ACS population estimates of the percent per census tract of people between 10 and 64 years old,demographic,demographic,percent
+elderly_64_years_percent,elderly65,Elderly > 64 years (%),2019 ACS population estimates of the percent per census tract of elderly 65 years and older,demographic,demographic,percent
+hispanic_percent,hispanic,Hispanic (%),2019 ACS population estimates of the percent per census tract of those who identify as Hispanic or Latino,demographic,demographic,percent
+white_percent,white,White (%),2019 ACS population estimates of the percent per census tract of those who identify as non-Hispanic white,demographic,demographic,percent
+african_american_percent,african_am,African American (%),2019 ACS population estimates of the percent per census tract of those who identify as non-Hispanic African American or black,demographic,demographic,percent
+native_american_percent,native_am,Native American (%),2019 ACS population estimates of the percent per census tract of those who identify as non-Hispanic Native American,demographic,demographic,percent
+other_multiple_percent,other_mult,Other/Multiple (%),"2019 ACS population estimates of the percent per census tract of those who identify as non-Hispanic ""other"" or as multiple races",demographic,demographic,percent
+asian_american_percent,aapi,Asian American (%),2019 ACS population estimates of the percent per census tract of those who identify as non-Hispanic Asian or Pacific Islander,demographic,demographic,percent
+geometry,geometry,Geometry,Geospatial data defining Census Tract polygons,geospatial,NA,NA

@@ -20,7 +20,6 @@ library(leaflet)
 library(glue)
 library(janitor)
 library(here)
-library(FedData)
 
 ## conflicts ----
 library(conflicted)
@@ -43,11 +42,7 @@ geographic_crs <- 4269 # see: https://epsg.io/4269
 # load data ----------------------------------------------------------------
 ## CalEnviroScreen 4 ----
 ces_4 <- st_read(here('data_processed', 
-                      'calenviroscreen_4-0.gpkg')) %>% 
-    mutate(c_iscore = case_when(c_iscore == -999 ~ NA,
-                                TRUE ~ c_iscore),
-           c_iscore_p = case_when(c_iscore_p == -999 ~ NA,
-                                  TRUE ~ c_iscore_p))
+                      'calenviroscreen_4-0_processed_tiger_simple.gpkg'))
 
 ## CA boundary ----
 ca_boundary <- st_read(here('data_processed', 
@@ -117,7 +112,7 @@ server <- function(input, output) {
         #### create color palette for CES scores ----
         ces_pal <- colorNumeric(
             palette = 'RdYlGn', 
-            domain = ces_4$c_iscore_p, 
+            domain = ces_4$calenviroscreen_4_0_percentile, 
             reverse = TRUE)
         
         #### add CES polygons ----
@@ -130,21 +125,21 @@ server <- function(input, output) {
                         smoothFactor = 1.0,
                         opacity = 0.8,
                         fillOpacity = 0.8,
-                        fillColor = ~ces_pal(c_iscore_p), 
+                        fillColor = ~ces_pal(calenviroscreen_4_0_percentile), 
                         highlightOptions = highlightOptions(color = "white", weight = 2), 
                         popup = ~paste0('<b>', '<u>','CalEnviroScreen 4.0 (CES)', '</u>','</b>','<br/>',
-                                        '<b>', 'Census Tract: ', '</b>',  tract, '<br/>',
-                                        '<b>', 'CES Score: ', '</b>', round(c_iscore, 2), '<br/>',
-                                        '<b>', 'CES Percentile: ', '</b>', round(c_iscore_p, 2), '<br/>'),
+                                        '<b>', 'Census Tract: ', '</b>',  census_tract_2010, '<br/>',
+                                        '<b>', 'CES Score: ', '</b>', round(calenviroscreen_4_0_score, 2), '<br/>',
+                                        '<b>', 'CES Percentile: ', '</b>', round(calenviroscreen_4_0_percentile, 2), '<br/>'),
                         group = 'CalEnviroScreen 4.0'#,
-                        # label = ~glue('CES 4.0 (Percentile: {round(c_iscore_p, 2)})')
+                        # label = ~glue('CES 4.0 (Percentile: {round(calenviroscreen_4_0_percentile, 2)})')
             )
         
         #### add CES legend ----
         ces4_map <- ces4_map %>%
             addLegend(position = 'bottomleft',
                       pal = ces_pal,
-                      values = ces_4$c_iscore_p,
+                      values = ces_4$calenviroscreen_4_0_percentile,
                       opacity = 1,
                       layerId = 'ces_legend',
                       bins = 4,
