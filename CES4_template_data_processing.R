@@ -121,7 +121,7 @@ sf_ces4_tiger <- sf_tracts_2010_tiger %>%
     arrange(census_tract_2010) %>% 
     {.}
 
-### add CES4 data to 2010 tiger tracts ----
+#### add CES4 data to 2010 tiger tracts ----
 sf_ces4_tiger <- sf_ces4_tiger %>% 
     left_join(sf_ces4_processed %>% 
                   st_drop_geometry(), 
