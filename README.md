@@ -6,6 +6,6 @@ NOTE: The application uses a processed version of the CalEnviroScreen 4.0 datase
 
 -   replacing the spatial data associated with the census tracts in the original CalEnviroScreen 4.0 shapefile with a simplified version of census tracts from the 2010 TIGER dataset (this was done to eliminate minor gaps and overlaps between adjacent census tracts that exist in the CalEnviroScreen 4.0 shapefile)
 -   encoding missing values as `NA` rather than `-999`
--   editing variable names to make them more descriptive
+-   editing variable names to make them more descriptive (see the `data_processed/ces-4_names.csv` file for a data dictionary)
 
 More details about these processing steps can be found in the `CES4_template_data_processing.R` script, and the processed datasets (in geopackage file format) can be found in the `data_processed` folder.
